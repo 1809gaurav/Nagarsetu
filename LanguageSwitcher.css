@@ -1,0 +1,98 @@
+.language-switcher {
+  position: relative;
+}
+
+.language-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.language-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.language-toggle svg {
+  font-size: 1rem;
+}
+
+.lang-code {
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.language-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 150px;
+  z-index: 999;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .language-dropdown {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.language-option {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.language-option:hover {
+  background-color: var(--light-bg);
+}
+
+[data-theme="dark"] .language-option:hover {
+  background-color: #4b5563;
+}
+
+.language-option.active {
+  background-color: rgba(30, 58, 138, 0.1);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .language-option.active {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.lang-name {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.lang-english {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
